@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo Menu</title>
+    <span class="menu-tooltip">Novo Menu</span>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400&display=swap" rel="stylesheet">
@@ -16,11 +16,6 @@
     <nav class="main-nav" >
         <div class="logo-type-section">
             <div>
-                <button type="button" aria-label="Menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" class="iconify iconify--mdi" width="24" height="24" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" style="color: rgb(255, 255, 255);">
-                        <path fill="currentColor" d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"></path>
-                    </svg>
-                </button>
                 <h1 id="heading-title-logo">Valor economico </h1>
                 <a title="Valor economico " href="/">
                      <img src="img/logo_vertical.png" alt="" >
@@ -31,51 +26,52 @@
             <ul class="menu-items">
                 <li class="menu-item" data-submenu="submenu-1">
                     <svg viewBox="0 0 24 24">
-                        <title>Notícias</title>
                         <path d="M14,17H4v2h10V17z M20,9H4v2h16V9z M4,15h16v-2H4V15z M4,5v2h16V5H4z"></path>
-                    </svg>                
+                    </svg>
+                    <span class="menu-tooltip">Notícias</span>              
                 </li>
                 <li class="menu-item ">
                     <svg viewBox="0 0 24 24">
-                        <title>Vídeos</title>
                         <path d="M17,10.5V7c0-0.6-0.5-1-1-1H4C3.5,6,3,6.4,3,7v10c0,0.5,0.5,1,1,1h12c0.5,0,1-0.5,1-1v-3.5l4,4v-11L17,10.5z"></path>
                     </svg>
+                    <span class="menu-tooltip">Videos</span>   
                 </li>
                 <li class="menu-item">
                     <svg viewBox="0 0 24 24">
-                        <title>Podcasts</title>
                         <path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"></path>
-                    </svg>                
+                    </svg>
+                    <span class="menu-tooltip">Podcasts</span>                
                 </li>
                 <li class="menu-item ">
                     <svg viewBox="0 0 24 24">
-                        <title>Corporativo</title>
                         <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"></path>
-                    </svg>                
+                    </svg>
+                    <span class="menu-tooltip">Corporativo</span>                
                 </li>
                 <li class="menu-item ">
                     <svg viewBox="0 0 24 24">
-                        <title>Produtos</title>
                         <path d="M22,17H18V10H22M23,8H17A1,1 0 0,0 16,9V19A1,1 0 0,0 17,20H23A1,1 0 0,0 24,19V9A1,1 0 0,0 23,8M4,6H22V4H4A2,2 0 0,0 2,6V17H0V20H14V17H4V6Z"></path>
-                    </svg>                
+                    </svg>  
+                    <span class="menu-tooltip">Produtos</span>              
                 </li>
                 <li class="menu-item ">
                     <svg viewBox="0 0 24 24">
-                        <title>Mais Canaltech</title>
-                            <path d="M2 4.9 2 19.1 14.9 19.1 11.4 15.5 5.5 15.5 5.5 8.5 14.9 8.5 14.9 19.1 18.5 19.1 18.5 8.5 22 8.5 22 4.9 2 4.9z"></path>
-                    </svg>                
+                       <path d="M2 4.9 2 19.1 14.9 19.1 11.4 15.5 5.5 15.5 5.5 8.5 14.9 8.5 14.9 19.1 18.5 19.1 18.5 8.5 22 8.5 22 4.9 2 4.9z"></path>
+                    </svg> 
+                    <span class="menu-tooltip">Produtos</span>                        
                 </li>
                 <li class="menu-item ">
                     <svg viewBox="0 0 24 24">
-                        <title>Canaltech Ofertas</title>
-                            <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
-                    </svg>            
+                        <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+                    </svg> 
+                    <span class="menu-tooltip">Canaltech Ofertas</span>           
                 </li>
                 <li class="menu-item ">
                     <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
                         <path d="M18 2c-.9 0-2 1-2 2H8c0-1-1.1-2-2-2H2v9c0 1 1 2 2 2h2.2c.4 2 1.7 3.7 4.8 4v2.08C8 19.54 8 22 8 22h8s0-2.46-3-2.92V17c3.1-.3 4.4-2 4.8-4H20c1 0 2-1 2-2V2h-4M6 11H4V4h2v7m14 0h-2V4h2v7z"></path>
-                        <title>Prêmio Canaltech</title>
-                    </svg>                
+                        
+                    </svg> 
+                    <span class="menu-tooltip">Prêmio Canaltech</span>               
                 </li>
              </ul>
             <ul>
