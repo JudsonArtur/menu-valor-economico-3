@@ -8,6 +8,7 @@ $('.menu-item').on('click',function(e){
       $('.submenu').find('ul').removeClass('open');       
      }else{
         $('.submenu').addClass('open');
+        $('.dropdown-menu').removeClass('open');
         $('.menu-shadow').addClass('open');
         $(`.${submenu}`).addClass('open');
      }  
