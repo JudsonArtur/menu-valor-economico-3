@@ -17,6 +17,7 @@ body {
     background-color: rgb(244, 244, 244);
     padding-left: 60px;
     min-height: 100vh;
+    position: relative;
 }
 
 .logo-type-section {
@@ -370,7 +371,7 @@ button {
 }
 
 .dashbord-container{
-    max-width: 100%;
+    max-width: 1200px;
     margin: 0px auto;
     padding: 30px;
 }
@@ -379,12 +380,21 @@ button {
        margin-left:60px ;
     }
 }
-
-
+.container-header{
+    padding: 10px 15px
+}
+.container-header span{
+    font-size: .95rem;
+    font-weight:600;
+    color:#6102e0 ;
+}
+.container-header h2{
+    font-size: 1.5rem;
+    color: rgb(19, 19, 19);
+} 
 .item-images {
     overflow: hidden;
     background-color: #ffffff;
-    cursor: pointer;
     border: 1px solid #cecece;
     border-radius: 5px;
     padding-bottom: 5px;
@@ -393,12 +403,21 @@ button {
 }
 .item h3 {
     margin: 5px 0 0 0;
-    font-size: .75rem;
+    font-size: .72rem;
     text-transform: uppercase;
     padding:0 5px;
 }
-.data-edition{
+.item-description > span {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    padding: 0 5px;
     font-size: .7rem;
+    text-transform: uppercase;
+}
+.data-edition{
+    font-size: .8rem;
     text-transform: uppercase;
     padding:0 5px;
 }
@@ -410,10 +429,10 @@ button {
 }
 .price i {
     font-style: normal;
-    font-size: .9rem;
+    font-size: .8rem;
 }
 .actual_price {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 .newspaper-promotional-price{
     display: block;
@@ -437,19 +456,113 @@ button {
     font-weight: 600;
 }
 .item a {
-    width: 100%;
-    text-transform: uppercase;
-    font-size:.7rem;
+  color: #fff;
 }
 .item-description{
     position: absolute;
     width: 100%;
-    text-align: center;
     height:100%;
+    text-align: center;
+    top: -100%;
+    transition: top .7s ease 0s;
+    border:8px solid #fff;
+    background-color: rgba(0, 0, 0, 0.93);
     flex-direction: column;
+    color: #fff;
+    border-radius: 8px;
+    justify-content: center;
     display:flex;
 }
+ .item:hover .item-description{
+    top: 0%;
+    transition: top .7s ease 0s;
+ }
+.item-description .buttons{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;    
+}
+.item-description .buttons.extra{
+    margin-left: 10px;
+}
+.buttons svg{
+  width: 25px;
+  fill: rgba(255, 255, 255, 0.4);
+  color:rgba(255, 255, 255, 0.4) ;
+  line-height: 0;
+}
 
+.btns{
+    position: relative;
+    margin:0 6px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.btns:hover{
+    background: rgb(34, 34, 34);
+}
+.btns:hover svg{
+    fill: rgba(255, 255, 255, 1);
+  color:rgba(255, 255, 255, 1) ;
+}
+.btns.extra{
+    width: auto;
+    height: 30px;  
+    padding: 0 15px;
+    border-radius: 3px;
+    font-size: .9rem;
+    background-color: #fff;
+    color: #111;
+}
+.btns.extra:hover{
+    background:#f2f2f2;
+}
+.btns.extra svg{
+    display: none;
+}
+
+.btns .tooltip{
+    font-size: .76rem;
+    white-space: nowrap;
+    position: absolute;
+    display: inline-block;
+    min-width: 50px;   
+    z-index: 10001;  
+    background: #fff;
+    padding: 6px 6px;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 2px;
+    color: #333;
+    transition: opacity 0.3s;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btns:hover  .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+.btns .tooltip::before{
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-left: 8px solid #fff;
+    border-bottom: 8px solid #fff;
+    display: block;
+    left: 50%;
+    top: 90%;
+    z-index: 10000;
+    transform: rotate(45deg) translateX(-50%);
+    transition: opacity 0.3s;
+}
 /*SHADOW*/
 .shadow_img {
     position: fixed;
@@ -478,4 +591,25 @@ button {
     color: #fff;
     width: 60px;
     height: 60px;
+}
+
+.modal-test{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100220;
+    background-color: #111111d5;
+    display: none;
+}
+.close-bar{
+    width: 100%;
+    background-color: #5029ec;
+    color:#fff;
+    padding: 5px 10px;
+}
+.close-bar svg{
+  width: 30px;
+  cursor: pointer;
 }

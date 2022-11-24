@@ -23,4 +23,21 @@ $('body').on('click',function(){
    $('.menu-shadow').removeClass('open');  
       $('.submenu').removeClass('open');
       $('.submenu').find('ul').removeClass('open'); 
+});
+
+
+$('body').on('click','.newspaper_addon',function(){
+          let documentId = $(this).data('id');
+         
+          if(documentId === '' || documentId === undefined || documentId === null){ 
+            alert('Sem documento...');
+            return;
+         }
+          let config = { documentId: documentId, darkMode: true };
+          
+          CloudPDF(config, document.getElementById('viewer')).then((instance) => {});
+          $('.modal-test').css('display','block')
+})
+$('body').on('click','.close-bar',function(){
+    $('.modal-test').css('display','none')
 })
