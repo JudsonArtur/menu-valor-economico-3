@@ -41,3 +41,30 @@ $('body').on('click','.newspaper_addon',function(){
 $('body').on('click','.close-bar',function(){
     $('.modal-test').css('display','none')
 })
+
+document.addEventListener("DOMContentLoaded", function() {
+   const imageObserver = new IntersectionObserver((entries, imgObserver) => {
+       entries.forEach((entry) => {
+           if (entry.isIntersecting) {
+               const lazyImage = entry.target
+               lazyImage.src = lazyImage.dataset.src
+               lazyImage.classList.remove("lzy_img");
+               imgObserver.unobserve(lazyImage);
+           }
+       })
+   });
+   const arr = document.querySelectorAll('img.lzy_img')
+   arr.forEach((v) => {
+       imageObserver.observe(v);
+   })
+})
+ //SHADOW BOX
+ $('.show_imgs').on('click', function () {
+   let src = $(this).parent('.buttons').parent('.item-description').siblings('img').attr('src');
+   console.log($(this).parent('.buttons'));
+   $('.shadow_img').addClass('show');
+   $('.shadow_img').find('img').attr('src', src);
+});
+$('.hide').on('click', function () {
+   $('.shadow_img').removeClass('show');
+});

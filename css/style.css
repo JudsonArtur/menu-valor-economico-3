@@ -250,6 +250,9 @@ button {
  @media (max-width: 767px){
         .submenu {
             top: 60px;
+            height: 100%;
+            overflow-y: auto;
+            padding-bottom: 50px;
         }
         .general-content {
             padding-top: 60px;
@@ -275,6 +278,7 @@ button {
             height: unset;
             overflow: auto;
         }
+       
     }
 
 
@@ -400,6 +404,7 @@ button {
     padding-bottom: 5px;
     position: relative;
     overflow: hidden;
+    min-height: 350px
 }
 .item h3 {
     margin: 5px 0 0 0;
@@ -588,9 +593,9 @@ button {
     cursor: pointer;
 }
 .hide svg {
-    color: #fff;
-    width: 60px;
-    height: 60px;
+    color: #ff232f;
+    width: 50px;
+    height: 50px;
 }
 
 .modal-test{
@@ -612,4 +617,25 @@ button {
 .close-bar svg{
   width: 30px;
   cursor: pointer;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    position: relative;
 }
