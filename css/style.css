@@ -9,7 +9,12 @@
 img{
     max-width: 100%;  
 }
-
+ul{
+    list-style: none;
+}
+button {
+    cursor: pointer;
+}
 body {
     background-color: #5544aa;
 }
@@ -19,7 +24,6 @@ body {
     min-height: 100vh;
     position: relative;
 }
-
 .logo-type-section {
     position: fixed;
     display: flex;
@@ -29,41 +33,26 @@ body {
     align-items: center;
     top: 0px;
     left: 0px;
-    right: 0px;
     width: 60px;
     height: 60px;
     background: rgb(0, 0, 0);
     overflow: hidden;
     z-index: 9998;
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 10px;
 }
-
 .logo-type-section div {
     width: 40px;
     height: 40px;
     overflow: hidden;
 }
-
-.logo-type-section button {
-    display: none;
-}
 .logo-type-section  img{
-    
     border-radius: 50%;
 }
-ul{
-    list-style: none;
-}
-button {
-    cursor: pointer;
-}
-
 .logo-type-section #heading-title-logo {
     display: none;
     visibility: hidden;
 }
-
 .menu {
     background-color: rgb(0, 0, 0);
     position: fixed;
@@ -81,7 +70,6 @@ button {
     -webkit-box-align: center;
     align-items: center;
 }
-
 .menu ul {
     display: flex;
     flex-direction: column;
@@ -92,7 +80,6 @@ button {
     width: 40px;
     margin-top: 5px;
 }
-
 .menu-item {
     position: relative;
     display: flex;
@@ -104,13 +91,11 @@ button {
     height: 40px;
     margin-bottom: 5px;
 }
-
 .menu-item:hover {
     background: rgb(34, 34, 34);
     border-radius: 50%;
     cursor: pointer;
 }
-
 .menu-item svg {
     width: 24px;
     height: 24px;
@@ -118,13 +103,11 @@ button {
     color:rgba(255, 255, 255, 0.4) ;
     transition: fill 0.4s ease-in-out 0s;
 }
-
 .menu-item:hover svg {
     fill: rgb(255, 255, 255);
     transition: fill 0.4s ease-in-out 0s;
 }
-
- .menu-tooltip {
+.menu-tooltip {
     font-size: .76rem;
     white-space: nowrap;
     font-style: normal;
@@ -161,9 +144,7 @@ button {
 }
 .menu ul:last-child {
     padding: 0px 5px 5px;
- 
 }
-
 .menu-shadow {
     position: fixed;
     top: 0px;
@@ -213,7 +194,6 @@ button {
     padding: 24px 15px;
     width: 100%;
 }
-
 .submenu-item:nth-of-type(n+2):hover {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.05);
@@ -231,8 +211,9 @@ button {
     display: block;
     height: 100%;
     color: inherit;
+    line-height: 20px;
     text-decoration: none;
-    padding: 0px 16px;
+    padding: 10px 16px;
 }
 .menu-avatar{
     border-radius: 50%;
@@ -245,44 +226,6 @@ button {
     align-items: center;    
     background: rgba(255, 255, 255, 0.4);
 }
-
-
- @media (max-width: 767px){
-        .submenu {
-            top: 60px;
-            height: 100%;
-            overflow-y: auto;
-            padding-bottom: 50px;
-        }
-        .general-content {
-            padding-top: 60px;
-            padding-left: 0px;
-        }
-        .logo-type-section {
-            width: 100%;
-        }
-       
-    
-        .logo-type-section button {
-            display: flex;
-            position: absolute;
-            left: 18px;
-            top: 21px;
-            border: 0px;
-            background: transparent;
-            outline: none;
-            cursor: pointer;
-        }
-        .logo-type-section div {
-            width: unset;
-            height: unset;
-            overflow: auto;
-        }
-       
-    }
-
-
-
 .dropdown-menu {
     position: absolute;
     z-index: 1000;
@@ -327,15 +270,12 @@ button {
     padding-bottom: 3px;
     margin-bottom: 3px;
 }
-
 .dropdown-group:last-of-type{
     border-bottom: none;
 }
 .center{
     text-align: center;
 }
-
-
 .dropdown-menu__icon {
     width: 60px;
     height: 60px;
@@ -346,14 +286,11 @@ button {
     display: inline-block;
     margin-bottom: 5px;
 }
-
-
 .dropdown-link--item svg {
     height: 16px;
     position: relative;
     top: 3px;
 }
-
 .dropdown-link--item {
     display: block;
     font-size: 14px;
@@ -373,16 +310,10 @@ button {
 .dropdown-menu.open {
     display: block;
 }
-
 .dashbord-container{
     max-width: 1200px;
     margin: 0px auto;
     padding: 30px;
-}
-@media(max-width: 767px){
-    .dashbord-container{
-       margin-left:60px ;
-    }
 }
 .container-header{
     padding: 10px 15px
@@ -568,7 +499,9 @@ button {
     transform: rotate(45deg) translateX(-50%);
     transition: opacity 0.3s;
 }
+
 /*SHADOW*/
+
 .shadow_img {
     position: fixed;
     width: 100%;
@@ -588,14 +521,22 @@ button {
 }
 .hide {
     position: absolute;
-    right: 40px;
-    top: 40px;
+    right: 20px;
+    top: 20px;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border:1px solid #333;
+    background-color: #444;
+}
+.hide:hover{
+    background-color: rgb(121, 118, 118);
 }
 .hide svg {
     color: #ff232f;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 
 .modal-test{
@@ -619,6 +560,7 @@ button {
   cursor: pointer;
 }
 
+/* Image loafding  */
 @keyframes placeHolderShimmer{
     0%{
         background-position: -468px 0
@@ -627,7 +569,6 @@ button {
         background-position: 468px 0
     }
 }
-
 .animated-background {
     animation-duration: 1s;
     animation-fill-mode: forwards;
@@ -638,4 +579,52 @@ button {
     background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
     background-size: 800px 104px;
     position: relative;
+}
+
+/* Media queries */
+@media (max-width: 767px){
+    .submenu {
+        top: 60px;
+        height: 100%;
+        overflow-y: auto;
+        padding-bottom: 50px;
+    }
+    .general-content {
+        padding-top: 60px;
+        padding-left: 0px;
+    }
+    .logo-type-section {
+        width: 100%;
+    }   
+    .logo-type-section div {
+        width: unset;
+        height: unset;
+        overflow: auto;
+        align-items: center;
+        display: flex;
+    }
+    .logo-type-section a{
+        order: -1;  
+    } 
+    .logo-type-section a img{
+        width: 30px;
+        margin-right: 10px;
+        position: relative;
+        top: 2px;
+    }
+    .logo-type-section #heading-title-logo{
+           display: inline-flex;
+           color: #fff;
+           visibility: visible;          
+    }
+    .dashbord-container{
+        margin-left:60px ;
+        padding:10px 0;
+     }   
+}
+
+@media(max-width: 347px){
+   .item-images{
+    min-height: auto;
+   }
 }
