@@ -408,7 +408,7 @@ button {
     z-index: -1;
     transition: top .7s ease 0s;
     border:8px solid #fff;
-    background-color: rgba(255, 255, 255, 0.99);
+    background-color: rgba(255, 255, 255, 0.97);
     flex-direction: column;
     color: #333;
     border-radius: 8px;
@@ -528,22 +528,23 @@ button {
 }
 .hide {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right:3px;
+    top: 3px;
     cursor: pointer;
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     border:1px solid #333;
     background-color: #444;
+    border: 5px solid #fff;
 }
 .hide:hover{
-    background-color: rgb(121, 118, 118);
+    background-color: #222;
 }
 .hide svg {
-    color: #ff232f;
-    width: 30px;
-    height: 30px;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
 }
 
 .modal-test{
@@ -558,12 +559,16 @@ button {
 }
 .close-bar{
     width: 100%;
-    background-color: #5029ec;
     color:#fff;
-    padding: 5px 10px;
+    position: relative;
+}
+.close-bar span{
+    position: absolute;
+    top: 6px;
+    right: 90px
 }
 .close-bar svg{
-  width: 30px;
+  width: 33px;
   cursor: pointer;
 }
 

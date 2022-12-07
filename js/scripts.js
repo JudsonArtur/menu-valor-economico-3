@@ -1,15 +1,18 @@
 
 $('.menu-item').on('click',function(e){
    e.stopPropagation();
+   $('.dropdown-menu').removeClass('open');
    let submenu = $(this).data('submenu');
      if( $(`.${submenu}`).length == 0 || $(`.${submenu}`).hasClass('open')){
       $('.menu-shadow').removeClass('open');  
       $('.submenu').removeClass('open');
       $('.submenu').find('ul').removeClass('open');       
      }else{
-        $('.submenu').addClass('open');
-        $('.dropdown-menu').removeClass('open');
+        $('.submenu').addClass('open');       
         $('.menu-shadow').addClass('open');
+        $('.submenu').find('ul').map(function(index){
+            $(`.submenu-${index}`).removeClass('open');
+        });
         $(`.${submenu}`).addClass('open');
      }  
 });
@@ -61,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
  //SHADOW BOX
  $('.show_imgs').on('click', function () {
    let src = $(this).parent('.buttons').parent('.item-description').siblings('img').attr('src');
-   console.log($(this).parent('.buttons'));
    $('.shadow_img').addClass('show');
    $('.shadow_img').find('img').attr('src', src);
 });
