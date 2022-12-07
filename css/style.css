@@ -4,7 +4,7 @@
     padding: 0px;
     box-sizing: border-box;
     outline: none;
-    font-family: 'Lexend', sans-serif;
+    font-family: 'Lexend', sans-serif !important;
 }
 img{
     max-width: 100%;  
@@ -593,6 +593,113 @@ button {
     position: relative;
 }
 
+.plan-item{
+    border:2px solid #ccc;
+    background-color: #fff;
+    border-radius: 7px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+.plan-item.recommended{
+    background-color: rgb(32, 32, 32);
+    border:2px solid #000;
+}
+.plan-item > *{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.plan-header h3{
+    font-size: 1.31rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+.plan-item.recommended .plan-header h3,
+.plan-item.recommended .plan-price, 
+.recommended .plan-tip, 
+.recommended .plan-features h4,
+.recommended .plan-features-item 
+{
+    color: rgba(255, 255, 255, 0.94);
+}
+.plan-price {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #353535;
+}
+
+.plan-price .currency{
+    font-size: 1.3rem;
+    position: relative;
+    top:-10px
+}
+.plan-tip{
+    color: #444;
+    padding: 5px ;
+    text-align: center;
+}
+.plan-button {
+    display: block;
+    margin: 20px 0 10px;
+    padding: 15px 10px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    font-size: 1.12rem;
+    border-radius: 5px;
+}
+.recommended .plan-button{
+    background-color: #fbfbfb;
+    color: rgb(0, 0, 0);
+}
+.plan-features{
+    margin-top: 25px;
+}
+.plan-features h4{
+    font-size: 1.1rem;
+    color: #555;
+}
+.plan-features-items 
+{
+    padding-top: 18px;
+}
+.plan-features-item 
+{
+    margin-bottom: 15px;
+}
+.plan-features-item svg{
+    width: 18px;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    
+}
+.recommended .plan-features-item svg{
+    fill: #fafafa;
+}
+@media (max-width: 1200px){
+    .plan-item > *{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+@media (max-width: 990px){
+    .plan-item > *{
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+}
+@media (max-width: 500px){
+    .plan-item > *{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .plan-features-item 
+{
+    font-size: .9rem;
+}
+}
 /* Media queries */
 @media (max-width: 767px){
     .submenu {
