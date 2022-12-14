@@ -70,3 +70,8 @@ document.addEventListener("DOMContentLoaded", function() {
 $('.hide').on('click', function () {
    $('.shadow_img').removeClass('show');
 });
+
+$('.details-click').on('click',function(){
+    $('.transaction-details').slideUp(0);
+   $(this).parents('.ds-flex').siblings('.transaction-details').slideToggle(0);
+});
