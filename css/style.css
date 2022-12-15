@@ -675,16 +675,19 @@ button {
 }
 
 .plan-title-section {
-    margin: 20px 0;
+    margin: 20px auto;
+    line-height: 66px;
+    width: 65%;
     text-align: center;
 }
-.plan-title-section h2{
-    font-family: 'Amatic SC', cursive !important;
-    font-size: 5rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #222;
+.plan-title-section h2{                                              
+    font-size: 3.6rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #454545;
 } 
+
 .plan-item *{
     font-family: 'Graphik', sans-serif !important;
 }
@@ -702,8 +705,6 @@ button {
     padding-bottom: 30px;
     margin-bottom: 20px;
 }
-
-
 .plan-item>* {
     padding-left: 20px;
     padding-right: 20px;
