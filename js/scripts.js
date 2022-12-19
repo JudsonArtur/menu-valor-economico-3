@@ -75,3 +75,21 @@ $('.details-click').on('click',function(){
     $('.transaction-details').slideUp(0);
    $(this).parents('.ds-flex').siblings('.transaction-details').slideToggle(0);
 });
+
+
+$('.payment-ways--header').on('click',function(){
+    $('.payment-gateway').find('input').prop('checked',false);
+    $('.payment-transfer').find('input').prop('checked',false);
+    $('.payment-ways--body').removeClass('open');
+    $(this).find('input').prop('checked',true);
+    $(this).siblings('.payment-ways--body').addClass('open');
+      
+      if( $('#transfer').is(":checked")){
+         $('.payment-button').addClass('transfer');
+         $('.payment-button').text('Transferência Bancaria');
+      }else{
+        $('.payment-button').removeClass('transfer');
+        $('.payment-button').text('Multicaixa Express');
+      }
+    
+});

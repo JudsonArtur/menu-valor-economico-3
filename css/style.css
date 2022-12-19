@@ -5,9 +5,14 @@
     outline: none;
     font-family: 'Lexend', sans-serif !important;
 }
+
 @font-face {
-    font-family: 'graphik';
-    src: url('../fonts/Graphik-Regular.ttf');
+    font-family: 'circular';
+    src: url('../fonts/CircularXXWeb-Regular.woff2');
+}
+@font-face {
+    font-family: 'circular-bold';
+    src: url('../fonts/CircularXXWeb-Bold.woff2');
 }
 img {
     max-width: 100%;
@@ -22,7 +27,7 @@ button {
 }
 
 .general-content {
-    background-color: rgb(244, 244, 244);
+    background-color: #f6f6f6;
     padding-left: 60px;
     min-height: 100vh;
     position: relative;
@@ -676,12 +681,11 @@ button {
 
 .plan-title-section {
     margin: 20px auto;
-    line-height: 66px;
     width: 65%;
     text-align: center;
 }
 .plan-title-section h2{                                              
-    font-size: 3.6rem;
+    font-size: 2.46rem;
     font-weight: 900;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -698,7 +702,6 @@ button {
     background: #fff;
     text-align: center;
     overflow: hidden;
-    float: left;
     position: relative;
     box-shadow: 0 6px 6px 0 rgb(178 178 178 / 33%);
     border-radius: 4px;
@@ -711,27 +714,23 @@ button {
 }
 
 .plan-item--icon{
-    width:60px;
-    height: 60px;
-  margin: 10px auto 15px;
+    width:110px;
+    height: 70px;
+  margin: 10px auto 20px;
 }
 .plan-item--icon svg{
-    width:60px;
-    height: 60px;
-}
-.plan-item--icon .md{
-    font-size: 50px;
-    color: #403882;
+    width:110px;
+    height: 70px;
 }
 .plan-header h3 {
-    font-size: 1.31rem;
+    font-size: 1.271rem;
     color: #403882;
     font-weight: 400;
     margin-bottom: 25px;
 }
 
 .plan-price {
-    font-size: 2.35rem;
+    font-size: 2.105rem;
     text-align: center;
     color: #403882;
     font-weight: 500;
@@ -739,7 +738,7 @@ button {
 }
 
 .plan-price .currency {
-    font-size: 1.3rem;
+    font-size: 1.03rem;
     position: relative;
     top: -2px;
     right: 3px
@@ -864,6 +863,241 @@ button {
     color: #3b82ff;
 }
 
+.checkout-page{
+    background-color: #fff;
+    border-radius: 7px;
+    max-width: 590px;
+    margin: 10px auto;
+    padding:32px 48px 48px;
+}
+.page-2 h2{
+    color: #02a95c;
+    font-size: 1.43rem;
+}
+.checkout-page *{
+    font-family: 'circular',sans-serif !important;
+}
+.checkout-page .back-block{
+    border:1px solid rgb(200, 200, 200);
+    color: rgb(168, 163, 163);
+    appearance: none;
+    font-size: 1.45rem;
+    font-weight: 900;
+    width: 50px;
+    height: 30px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.checkout-page .back-block:hover{
+    background-color: rgb(248, 248, 248);
+    border-color: rgb(200, 200, 200);
+    color: rgb(51, 51, 51);
+}
+.checkout-page .back-block .md{
+    position: relative;
+    left: -4px;
+}
+.checkout-page .your-choice{
+    padding: 15px;
+   margin: 20px 0;
+    background-color:#f8f8f8 ;
+    border-radius: 5px;
+}
+.checkout-page .your-choice .md{
+    font-size: 2.6rem;
+    margin-right: 10px;
+    color: rgb(0, 135, 72);
+}
+
+.checkout-page .your-choice span{
+    font-size: .8rem;
+}
+.checkout-page .your-choice h2{
+    font-size: 1.18rem;
+    color: rgb(0, 135, 72);
+}
+
+.checkout-page .value-block{
+    background-color: #fff;
+    border: 1px solid #c8c8c8;
+    cursor: text;
+    padding: 12px 10px;    
+    margin: 40px 0 30px  ;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+.value-block--currency {
+    width: 40px;
+    text-align: center;
+    font-weight: 900;
+    color: #444;
+}
+.value-block--currency span{
+    display: block;
+    font-size: 1.25rem;
+}
+.value-block--value{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #444;
+    font-family: 'circular-bold',sans-serif !important;
+}
+.text-block{
+    margin: 25px 0;
+}
+.text-block h3{
+    font-size:1.02rem;
+    color: #333;
+    line-height: 1.5;
+    margin: 15px 0;
+}
+.text-block p, .payment-ways--body p, .checkout-page p{
+    line-height: 1.5;
+    font-size: .9rem;
+    color: #444;
+}
+.line-block{
+    display: block;
+    border-bottom:1px solid #f1f1f1; 
+    margin: 30px 0;
+}
+.payment-block h3{
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: #4b4b4b;
+}
+.payment-block-list{
+    border: 1px solid #c8c8c8;
+    border-radius: 0.25rem;
+}
+.payment-ways{
+    padding: 16px;
+}
+.payment-ways:not(:last-child){
+    border-bottom: 1px solid #c8c8c8;
+}
+.payment-ways--header{
+    cursor: pointer;
+}
+.payment-ways--header input{
+    appearance: none;
+    background: radial-gradient(circle,#fff 100%,#fff 0);
+    border: 0.125rem solid #c8c8c8;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0.125rem;
+    width: 20px;
+}
+.payment-ways--header label{
+    cursor: pointer;
+    width:calc(100% - 30px);
+}
+.payment-ways--header input:checked {
+    background: radial-gradient(circle,#02a95c 45%,#fff 0);
+    border-color: #02a95c;
+}
+.payment-ways--header input:hover:not(:disabled) {
+    box-shadow: 0 0 0 0.425rem #e6f6ef;
+}
+.payment-ways--header label svg{
+ width: 25px;
+ height: 25px;
+ margin: 0 15px; 
+} 
+
+.payment-ways--body{
+    padding: 20px 25px 10px;
+    display: none;
+}
+.payment-ways--body.open{
+    display: block;
+}
+.payment-ways--body p{
+    padding:5px 0px;
+}
+.payment-ways--values {
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom:1px solid #ccc;
+    margin-bottom: 10px;
+}
+.payment-ways--values li{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: .907rem;
+    color: #727272;
+    font-weight: 600;
+}
+.checkbox-list {
+    padding: 20px 0;
+}
+.checkbox-list li{
+    margin: 15px 0;
+} 
+.checkbox-item input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0.125rem solid #c8c8c8;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 20px;
+    margin: 0.125rem;
+    position: relative;
+    width: 20px;
+}
+.checkbox-item label{
+    width: calc(100% - 38px);
+    margin-left: 14px;
+    font-size: .94rem;
+}
+.checkbox-item input:checked {
+    background: #02a95c;
+    border-color: #02a95c;
+    content:  url(../img/checkmark.svg);
+   }
+   .checkbox-item input:hover:not(:disabled){
+    box-shadow: 0 0 0 0.425rem #e6f6ef;
+   }
+
+.payment-button{
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px 10px;
+  font-size: 1.3rem;
+  background-color: #EC7008;
+  color: #fff;
+}
+.payment-button:hover{
+    background-color: #b75506;
+}
+.payment-button.transfer{
+    background: #02a95c;
+}
+.payment-button.transfer:hover{
+    background: #097b46;
+}
+.text-block.last p{
+    font-size: .86rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #555;
+}
+.text-block.last p a{
+    text-decoration: underline;
+    color: #000;
+}
 
 @media (max-width: 1200px) {
     .plan-item>* {
@@ -884,7 +1118,12 @@ button {
         padding-left: 10px;
         padding-right: 10px;
     }
-   
+   .checkout-page{
+    padding: 22px 18px 48px;
+   }
+   .value-block--value{
+    font-size: 1.7rem;
+   }
 }
 
 
