@@ -1,10 +1,27 @@
 /*RESET*/
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+    outline: none;
+    font-family: 'Lexend', sans-serif !important;
 }
+
+@font-face {
+    font-family: 'circular';
+    src: url('../fonts/CircularXXWeb-Regular.woff2');
+}
+@font-face {
+    font-family: 'circular-bold';
+    src: url('../fonts/CircularXXWeb-Bold.woff2');
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    text-rendering: optimizeLegibility;
+}
+
 ::after,
 ::before {
     box-sizing: border-box;
@@ -31,14 +48,36 @@ a {
     outline: 0;
     border: 0;
     color: #444;
-    font-family: 'Barlow', sans-serif;
 }
-html,
-body {
-    width: 100%;
-    height: 100%;
-    text-rendering: optimizeLegibility;
+
+.pr{
+    position: relative;
+    right: -14px;
 }
+.pr-1{
+    position: relative;
+    right: -9px;
+}
+.pr-2{
+    position: relative;
+    right: -5px;
+}
+.z-1{
+    z-index: 1;
+}
+.z-2{
+    z-index: 2;
+}
+.z-3{
+    z-index: 3;
+}
+.z-4{
+    z-index: 4;
+}
+.z-5{
+    z-index: 5;
+}
+
 *::-webkit-scrollbar {
     width: .6em;
 }
@@ -157,7 +196,6 @@ body {
     }
 }
 
-
 .modal-btn {
     display: block;
     padding: 12px 10px;
@@ -215,6 +253,29 @@ body {
 .btn-blue:hover {
     background-color: #196e98;
 }
+/* Image loading  */
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0
+    }
+    100% {
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    position: relative;
+}
+
 
 /*Overlay on demand*/
 .request-overlay {
@@ -281,6 +342,7 @@ body {
         max-width: 1200px;
     }
 }
+
 .modal-md{
     min-width: 250px;
     max-width: 650px;

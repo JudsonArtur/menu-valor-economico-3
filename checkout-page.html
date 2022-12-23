@@ -80,19 +80,21 @@
              </ul>
             <ul>
                 <li class="menu-item  menu-avatar">
-                    <img src="img/avatar.png" alt="" srcset="">
+                    <img src="img/avatar.png" alt="" >
                 </li>
             </ul>
         </nav>
     </nav>
     <div  class="dashboard-content">
        <div class="dashbord-container">                
-            <div class="checkout-page">
+            <div class="checkout-page ds-flex-center--vertical">
                 <a class="back-block">
-                    <ion-icon name="chevron-back-outline"></ion-icon>
+                    <span class="arrow-back">
+
+                    </span>
                 </a>
                 <div class="your-choice ds-flex-center--vertical">
-                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M448 256c0-106-86-192-192-192S64 150 64 256s86 192 192 192 192-86 192-192z" fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M352 176L217.6 336 160 272"/></svg>
                     <div>
                         <span>Você escolheu.</span>
                         <h2>Assinatura Mensal</h2>
@@ -117,14 +119,14 @@
                 <div class="line-block"></div>
                 <form>
                     <div class="payment-block">
-                        <h3>Formas de Pagamento.</h3>
+                        <h3>Forma de Pagamento</h3>
                         <div class="payment-block-list">
                             <div class="payment-ways payment-gateway">
                                 <div class="ds-flex-center--vertical payment-ways--header">
                                     <input type="radio" class="payment-ways--radio"  id="gateway" checked="checked" >
                                     <label for="gateway" data-id="gateway">
                                         <div class="ds-flex-center--vertical">
-                                            <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 99" width="100" height="99"><defs><image  width="95" height="96" id="img1" href="data:image/png;base64,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"/></defs><style></style><use  href="#img1" x="3" y="2"/></svg>
+                                              <img src="img/mx-express.png" alt="" >
                                             <span>Multicaixa Express</span>
                                         </div>
                                     </label>
@@ -144,24 +146,34 @@
                                             <span>Mensal</span>
                                         </li>
                                     </ul>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
                                 </div>
                             </div>
                             <div class="payment-ways payment-transfer">
                                 <div class="ds-flex-center--vertical payment-ways--header">
                                     <input type="radio" class="payment-ways--radio" id="transfer" >
                                     <label for="transfer" data-id="transfer">
-                                        <div class="ds-flex-center--vertical">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><rect x="48" y="96" width="416" height="320" rx="56" ry="56" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="60" d="M48 192h416M128 300h48v20h-48z"/></svg>
-                                            <span>Transferência Bancaria</span>
+                                        <div class="ds-flex-center--vertical" style="justify-content: space-between;">
+                                            <div class="ds-flex-center--vertical">
+                                                <img src="img/bank.png" alt="" >
+                                                <span>Transferência Bancaria</span>
+                                            </div>
+                                            <ul class="ds-flex-center--vertical banks-imgs">
+                                               <li class=" pr z-5"><span><img src="img/logo-bai.png" alt="" title="Banco BAI"></span></li>
+                                               <li class=" pr-1 z-4"><span><img src="img/bic-logo.png" alt=""  title="Banco BIC"></span></li>
+                                               <li class=" pr-2 z-3"><span><img src="img/bpc-logo.png" alt=""  title="Banco BPC"></span></li>
+                                               <li><span><img src="img/logo-bfa.png" alt=""  title="Banco BFA"></span></li>
+                                            </ul>
                                         </div>
                                     </label>
                                 </div>
                                 <div class="payment-ways--body">
                                     <p>
-                                        uam voluptatum fugit commodi nisi, minus magnam nihil ducimus, sint labore facere, ullam blanditiis quos aliquid cumque.
+                                        Permitimos pagamento por transferência bancária na moeda nacional (Kwanza)
                                     </p>
-                                    <ul class="payment-ways--values">
+                                    <p>
+                                        A informação sobre os dados para a transferência bancária serão mostrados na próxima página
+                                    </p>
+                                    <ul class="payment-ways--values brd-bottom">
                                         <li>
                                             <span>Total da assinatura</span>
                                             <span>4.000,00</span>
@@ -190,9 +202,14 @@
                             </label>
                         </li>
                     </ul>
-                    <button class="payment-button">
-                       Multicaixa Express
+                    <button class="payment-button pay-gateway open">
+                        <img src="img/mx-express.png" alt="">
+                         Multicaixa Express
                     </button>
+                    <button class="payment-button pay-transfer">
+                        <img src="img/bank-button.png" alt="" >
+                        Transferência Bancaria
+                     </button>
                 </form>
                  <div class="text-block last">
                      <p>
@@ -202,12 +219,22 @@
                         As doações para organizações beneficentes são feitas para o PayPal Giving Fund, menos as tarifas de processamento e concedidas em 15 a 45 dias, de acordo com seus termos.
                      </p>
                  </div>
+                 <div class="line-block"></div>
+                 <div class="garantee-block">
+                     <div class="icon-side">
+                         <img src="img/shield-1.png" alt="">
+                    </div>
+                     <div class="text-side">
+                          <h3>O GoFundMe protege a sua doação</h3>
+                          <p>
+                            Garantimos um reembolso total por até um ano no caso raro de ocorrência de fraude. <a href="#">Consulte nossa Garantia de Doação GoFundMe.</a>
+                          </p>
+                     </div>
+                 </div>
             </div>
        </div>
     </div>   
 </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/scripts.js"></script>
 </body>
