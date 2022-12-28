@@ -1,5 +1,5 @@
 .general-content {
-    background-color: #f6f6f6;
+    background-color: #f2f4f6;
     padding-left: 60px;
     min-height: 100vh;
     position: relative;
@@ -142,7 +142,6 @@
     font-style: normal;
     position: absolute;
     display: inline-block;
-    min-width: 120px;
     left: 55px;
     z-index: 10001;
     top: 1px;
@@ -207,7 +206,7 @@
     margin: 2px 0 0;
     font-size: 13px;
     left: 70px;
-    bottom: 25px;
+    bottom: 10px;
     text-align: left;
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.15);
@@ -312,55 +311,68 @@
     z-index: 1000;
     display: inline-flex;
 }
-.subscribe-flat-body:hover {
-    will-change: opacity;
-  }
-  
-  .subscribe-button:hover {
-    transition: width .25s ease-in-out;
-    width: 150px;
-    border-radius: 38px;
 
-  }
 .subscribe-button{
-    display: inline-flex;
-    width: 45px;
-    height: 45px;
-    background-color: #2a2a2a;
+    display: inline-flex;  
     color: #fefefe;
     align-items: center;
     justify-content: center;
     font-size: .94rem;
-    border-radius:50%;
-    /*border-radius: 38px 0px 0 38px; */
+    position: relative;
+    height: 46px;
+    cursor: pointer;
 }
-.subscribe-button:hover{
-    background-color: #333;
+.subscribe-button:hover  .subscribe-button--text{
+    padding-left:50px;
+    padding-right: 16px;
+    width: 165px;
+    color: #fff;
+    
 }
-.subscribe-button:hover .subscribe-button--icon svg{
-    margin-right: 10px;
+.subscribe-button:hover  .subscribe-button--icon{
+    left: 10px;
+    
 }
-.subscribe-button:hover .subscribe-button--text{
-    display: flex;    
-    transition:  all 1s cubic-bezier(1, 0.34, 0.66, 0.82);
+.subscribe-button--icon{
+    position: absolute;
+	align-items: center;
+    justify-content: center;
+    display: grid;
+    transition: transform .3s ease-in-out;
+    width: 46px;
+    height: 46px;
+    background-color: #2a2a2a;
+    border-radius: 50%;
 }
 .subscribe-button--icon svg{
-   width: 20px;
-   height: 20px;
+   width: 22px;
+   height: 22px;
    position: relative;
-   top: 2px;
 } 
 .subscribe-button--text{
-    display: none;
-   
-
+    position: relative;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    transition-timing-function: ease;
+    transition-duration: .3s;
+    transition-property: color,width;
+    border-radius: 56px;
+    width: 46px;
+    height: 46px;
+    background-color: #2a2a2a;
+    color: transparent;
+    text-overflow: clip;
+    white-space: nowrap;
 }
 .subscribe-flat-ellipsis{
     display: flex;
 }
 .subscribe-flat-ellipsis svg{
    width: 20px;
-   height: 45px;
+   height: 46px;
    fill: #393939;
 }
 .subscribe-flat-ellipsis svg:last-of-type{
@@ -699,7 +711,7 @@
     height: 70px;
 }
 .plan-item--icon img{
-    height: 80px;
+    height: 70px;
 }
 .plan-header h3 {
     font-size: 1.051rem;
@@ -717,7 +729,7 @@
 }
 
 .plan-price .currency {
-    font-size: .8rem;
+    font-size: .986rem;
     position: relative;
     top: -4px;
     right: 3px
@@ -888,6 +900,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: flex-end;
+    background-color: #ebebeb;
 }
   .arrow-back {
     display: inline-block;
@@ -898,10 +911,10 @@
     border-left: 1px solid rgb(168, 163, 163);
     transform: rotate(45deg);
   }
-.checkout-page .back-block:hover{
-    background-color: #ebebeb;
-    color: rgb(51, 51, 51);
-}
+
+  .checkout-page .back-block:hover  .arrow-back{
+        border-color: #111;
+  }
 
 .checkout-page .your-choice{
     padding: 15.5px 15px;
@@ -942,7 +955,7 @@
 }
 .value-block--currency span{
     display: block;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
 }
 .value-block--value{
     font-size: 2rem;
@@ -1071,8 +1084,8 @@
     justify-content: space-between;
     font-size: .907rem;
     color: #444;
-    padding: 13px 5px ;
-    border-top: 1px solid #efefef;
+    padding: 10px 5px ;
+    border-top: 1px solid #f6f6f6;
 }
 .checkbox-list {
     padding: 20px 0;
@@ -1138,10 +1151,16 @@
     background-color: #b75506;
 }
 .payment-button.pay-transfer{
-    background: #021ba9;
+    background: #002c73;
 }
 .payment-button.pay-transfer:hover{
-    background: #0825ca;
+    background: #053e9a;
+}
+.payment-button.pay-transfer img{
+    width: 21px;
+    height: 20px;
+    position: relative;
+    top: -1.2px;
 }
 .text-block.last p{
     font-size: .83rem;
