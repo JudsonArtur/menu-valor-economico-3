@@ -41,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function() {
  //SHADOW BOX
  $('.show_imgs').on('click', function () {
    let src = $(this).parent('.buttons').parent('.item-description').siblings('img').attr('src');
+    if(src === undefined){
+        src =  $(this).find('img').attr('src');
+    }
    $('.shadow_img').addClass('show');
    $('.shadow_img').find('img').attr('src', src);
 });

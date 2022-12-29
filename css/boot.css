@@ -15,6 +15,10 @@
     font-family: 'circular-bold';
     src: url('../fonts/CircularXXWeb-Bold.woff2');
 }
+@font-face {
+    font-family: 'Lavanderia';
+    src: url('../fonts/Lavanderia-Sturdy.otf');
+}
 html,
 body {
     width: 100%;
