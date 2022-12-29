@@ -1357,6 +1357,9 @@
 .recents-header p {
     font-size: .93rem;
 }
+.recents a .item-images:hover{
+    border-color: rgba(82,93,249,.5);
+}
 /* Media queries */
 
 @media (max-width: 1200px) {
