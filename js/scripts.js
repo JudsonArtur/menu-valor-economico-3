@@ -4,6 +4,7 @@ $('.menu-avatar').on('click',function(e){
     $('.dropdown-menu').toggleClass('open');
 });
 $('body').on('click',function(){
+   $('.checkout-plans').removeClass('open');
    $('.dropdown-menu').removeClass('open');
 });
 
@@ -65,10 +66,14 @@ $('.payment-ways--header').on('click',function(){
       
       if( $('#transfer').is(":checked")){
         $('.pay-gateway').removeClass('open');
-        $('.pay-transfer').addClass('open');   
-      }else{
-        $('.pay-transfer').removeClass('open');
-        $('.pay-gateway').addClass('open'); 
+        $('.pay-transfer').addClass('open'); 
+        return  
       }
-    
+        $('.pay-transfer').removeClass('open');
+        $('.pay-gateway').addClass('open');  
+});
+
+$('.value-block').on('click',function(e){
+    e.stopPropagation();
+    $(this).find('.checkout-plans').addClass('open');
 });
