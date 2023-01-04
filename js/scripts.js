@@ -77,3 +77,7 @@ $('.value-block').on('click',function(e){
     e.stopPropagation();
     $(this).find('.checkout-plans').addClass('open');
 });
+$('.history-table-row').on('click',function(e){
+    $(this).toggleClass('open');
+    $(this).find('.table-row--body').slideToggle();
+});
