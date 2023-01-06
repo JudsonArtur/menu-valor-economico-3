@@ -54,34 +54,6 @@ a {
     color: #444;
 }
 
-.pr{
-    position: relative;
-    right: -14px;
-}
-.pr-1{
-    position: relative;
-    right: -9px;
-}
-.pr-2{
-    position: relative;
-    right: -3px;
-}
-.z-1{
-    z-index: 1;
-}
-.z-2{
-    z-index: 2;
-}
-.z-3{
-    z-index: 3;
-}
-.z-4{
-    z-index: 4;
-}
-.z-5{
-    z-index: 5;
-}
-
 *::-webkit-scrollbar {
     width: .6em;
 }
@@ -101,6 +73,10 @@ a {
     color: #bbb;
 }
 
+
+.m-bottom{
+    margin-bottom: 20px !important;
+}
 /*GENERAL*/
 .strike {
     text-decoration: line-through;
