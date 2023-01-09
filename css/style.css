@@ -1601,7 +1601,7 @@
 .status-skin.green{
     background-color: #109237;
 }
-
+ 
 .status-skin.transf{
     background-color: #2869da;
 }
@@ -1616,8 +1616,50 @@
 .table-row--body {
     width: 100%;
     display: none;
-    padding: 25px;
+    padding: 0 0 15px;
     border-top: 1px solid #ededed;
+}
+
+.table-row--body ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+.table-row--body ul li{
+   width: 50%;
+   padding:10px; 
+}
+.table-row--body ul li:nth-of-type(7){
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#109237;    
+ }
+ .table-row--body ul li:nth-of-type(7) span{
+    color: #fff !important;
+    font-size: 1rem;
+    
+ }
+ .table-row--body svg{
+    width: 20px;
+    position: relative;
+    top: 2px;
+ }
+.table-row--body ul li:nth-of-type(1),
+.table-row--body ul li:nth-of-type(2),
+.table-row--body ul li:nth-of-type(5),
+.table-row--body ul li:nth-of-type(6){
+    background-color:#f3f3f3; 
+    
+ }
+.table-row--body ul li span{
+    font-size: .8rem;
+
+}
+.table-row--body ul li span:first-of-type{
+    font-weight: 600;
+    color: #434343;
+    padding-right: 5px;
 }
 /* Media queries */
 
