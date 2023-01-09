@@ -119,18 +119,14 @@ a {
 .box4,
 .box5,
 .box6{
-    padding: 15px;
+    padding: 5px;
 }
 .box1 {
     width: 100%;
     padding: 15px;
 }
-.box2 {
-    padding: 0 15px;
-}
 .box3 {
-    width: 33.333%;
-    padding: 0 15px;
+    width: 33.333%; 
 }
 @media (min-width: 200px) {
     .box2,
