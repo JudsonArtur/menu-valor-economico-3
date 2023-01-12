@@ -142,7 +142,7 @@
     transition: fill 0.4s ease-in-out 0s;
 }
 
-.menu-tooltip {
+.menu-tooltip, .re-order i{
     font-size: .76rem;
     white-space: nowrap;
     font-style: normal;
@@ -160,7 +160,7 @@
     transition: opacity 0.3s;
 }
 
-.menu-tooltip::before {
+.menu-tooltip::before , .re-order i::before {
     position: absolute;
     content: '';
     width: 5px;
@@ -175,7 +175,7 @@
     transition: opacity 0.3s;
 }
 
-.menu-item:hover .menu-tooltip {
+.menu-item:hover .menu-tooltip, .re-order:hover i{
     visibility: visible;
     opacity: 1;
 }
@@ -1616,8 +1616,25 @@
 .table-row--body {
     width: 100%;
     display: none;
-    padding: 0 0 15px;
+    padding: 15px 0;
+    background-color: #f9f9f9;
     border-top: 1px solid #ededed;
+    border-left: 4px solid transparent;
+}
+
+.table-row--body.green{
+    border-left-color: #109237;
+}
+ 
+.table-row--body.transf{
+    border-left-color: #2869da;
+}
+.table-row--body.mcx{
+    border-left-color: #EC7008;
+}
+
+.table-row--body.red{
+    border-left-color: #e03958;
 }
 
 .table-row--body ul{
@@ -1626,40 +1643,48 @@
 }
 .table-row--body ul li{
    width: 50%;
-   padding:10px; 
+   padding:9px 18px; 
+   display: flex;
+   align-items: center;
 }
-.table-row--body ul li:nth-of-type(7){
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:#109237;    
- }
- .table-row--body ul li:nth-of-type(7) span{
-    color: #fff !important;
-    font-size: 1rem;
-    
- }
+
+
  .table-row--body svg{
-    width: 20px;
+    width: 16px;
     position: relative;
     top: 2px;
+    fill: #fff;
  }
-.table-row--body ul li:nth-of-type(1),
-.table-row--body ul li:nth-of-type(2),
-.table-row--body ul li:nth-of-type(5),
-.table-row--body ul li:nth-of-type(6){
-    background-color:#f3f3f3; 
-    
- }
+
 .table-row--body ul li span{
     font-size: .8rem;
-
+    display: inline-block;
+    margin: 0 3px;
 }
 .table-row--body ul li span:first-of-type{
     font-weight: 600;
-    color: #434343;
-    padding-right: 5px;
+    color: #535353;
+    
+}
+.re-order{
+    padding: 1px 5px;
+    background-color: #109237;
+    color: #fff;
+    border-radius: 2px;
+    position: relative;
+}
+.re-order i{
+    font-size: .7rem;
+    left: 50%;
+    background-color: #109237;
+    transform: translateX(-50%);
+    top: -36px;
+    padding: 5px 10px;
+}
+.re-order i::before{
+    left: 48%;
+    border-color: #109237;
+    top: 81%;
 }
 /* Media queries */
 

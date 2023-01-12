@@ -81,3 +81,6 @@ $('.history-table-row').on('click',function(e){
     $(this).toggleClass('open');
     $(this).find('.table-row--body').slideToggle(500);
 });
+$('.re-order, .status-skin.transf').on('click',function(e){  
+    e.stopPropagation();
+});
