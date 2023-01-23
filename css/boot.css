@@ -172,6 +172,10 @@ a {
     }
 }
 
+.m10-adjust{
+    margin-left: -10px;
+    margin-right: -10px;
+}
 .modal-btn {
     display: block;
     padding: 12px 10px;
