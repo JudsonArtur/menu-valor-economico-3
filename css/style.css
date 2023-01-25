@@ -909,15 +909,15 @@
 
 /* CHECKOUT PAGE */
 
-.checkout-page{
+.checkout-page, .confirm-page {
     background-color: #fff;
-    border-radius: 7px;
+    border-radius: 3px;
     max-width: 590px;
     margin: 10px auto;
     padding:32px 48px 48px;
 }
 
-.checkout-page *{
+.checkout-page *, .confirm-page * {
     font-family: 'circular',sans-serif !important;
 }
 
@@ -1211,12 +1211,12 @@
     padding: 20px 0;
 }
 
-.checkbox-list li{
+.checkbox-list li , .confirm-tips li{
     margin: 15px 0;
 
 } 
 
-.checkbox-item input {
+.checkbox-item input, .confirm-tips li input{
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -1232,20 +1232,20 @@
     width: 20px;
 }
 
-.checkbox-item label{
+.checkbox-item label, .confirm-tips li label{
     width: calc(100% - 38px);
     margin-left: 14px;
     font-size: .88rem;
     color: #3c3c3c;
 }
 
-.checkbox-item input:checked {
+.checkbox-item input:checked, .confirm-tips li input {
     background: #02a95c;
     border-color: #02a95c;
     content:  url(../img/checkmark.svg);
  }
 
-.checkbox-item input:hover:not(:disabled){
+.checkbox-item input:hover:not(:disabled), .confirm-tips li input{
     box-shadow: 0 0 0 0.625rem #e6f6ef;
 }
 
@@ -1748,7 +1748,7 @@
 
 .filter__button {
     background-color: #343141;
-    padding: 11px 10px;
+    padding: 12px 10px;
     font-size: .93rem;
     color: #fff;
     max-width: 120px;
@@ -1762,39 +1762,83 @@
     line-height: 0;
 }
 
-.page_pagination {
+.loading{
+  margin: 10px auto 30px;
+  display: inline-flex;
+  padding: 15px 20px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  color: #1d0e0b;
+  align-items: center;
+  transition:  all .3s ease-in-out;
+  font-size: .9rem;
+  cursor: pointer;
+}
+.loading img{
+    display: none;
+    width: 20px;
+}
+.loading.active img{
+   display: inline-flex;
+   margin-left: 10px;
+}
+
+.privacy-policy-header{
+     width: 85%;
+     margin: 30px auto 0;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.privacy-logo {
     display: flex;
-    justify-content: space-between;
-    padding: 12px 20px;
-    background-color: #fff;
-    margin-top: 9px;
-    border: 1px solid #eaeaea;
-    border-radius: 4px;
+    align-items: center;
 }
-
-.page_pagination span {
-    font-size: .89rem;
-    color: #555;
-    font-weight: 300;
+.privacy-logo img{
+    border-radius: 6px;
+    width: 42px;
+    margin-right: 6px;
+    height: 42px;
 }
-.page_pagination span i{
-    font-style: normal;
+.privacy-logo span{
+    font-size: .9rem;
+    display: block;
     font-weight: 600;
-    display: inline-block;
-    margin: 0 2px;
 }
-.page_pagination span a.active {
-    color: #666;
-    cursor: not-allowed;
+.privacy-logo span:first-of-type{
+    font-size: .98rem;
+    
 }
-
-.page_pagination span a {
-    color: #0b49b4;
-    display: inline-block;
-    padding: 0 2px;
-    font-size: .8rem;
-    font-weight: 600;
-    cursor: pointer;
+.privacy-policy-header ul{
+    display: flex;
+    align-items: center;
+}
+.privacy-policy-header ul li{
+    margin-left: 15px;
+}
+.privacy-policy-header ul li a{
+   display: flex;
+   font-size: .97rem;
+   align-items: center;
+}
+.privacy-policy-header ul li:first-of-type a:hover{
+   text-decoration: underline;
+  }
+.privacy-policy-header ul li:last-of-type a{
+   padding: 8px 12px;
+   background-color: #F7941E;
+   color: #000;
+   transition: all .3s ease-in;
+   border-radius: 3px;
+   font-size: .86rem;
+ }
+ .privacy-policy-header ul li:last-of-type a:hover{
+    background-color: #df8618;
+  }
+.privacy-policy-header ul li a svg{
+    width: 20px;
+    margin-right: 5px;
 }
 .policy{
     padding: 35px;
@@ -1803,7 +1847,7 @@
     margin: 30px 0 ;
 }
 .policy .privacy-police--title{
-    margin-top: 40px;
+    margin-top: 25px;
     margin-bottom: 40px;
     font-size: 2rem;
     color: #454545;
@@ -1874,40 +1918,28 @@
     color: #565656;
 }
 
-.confirm-container{
-    margin: 30px auto 10px;
-    width: 65%;
-    max-width: 900px;
-    background-color: #fff;
-    box-shadow: 0 4px 5px rgb(50 50 80 / 10%);
-    border-radius: 5px;
-    padding: 40px;
-}
 .confirm-header{
-    justify-content: space-between;
    margin-bottom: 25px;
-   
+   text-align: center;
+   flex-direction: column;
+   align-items: center;
 }
+.confirm-header svg{
+    width: 54px;
+    color: #109237;
+  }
+
 .confirm-header h2{
-    font-size:1.6rem ;
+    font-size:1.16rem ;
     color: #4a4a4a;
-    margin-bottom: 2px;
+    margin: 12px 0 2px;
 }
-.confirm-header-button{
-    padding: 10px 15px;
-    background-color: #174fae;
-    color: #fff;
-    transition: all .3s ease-in-out;
-    border-radius: 3px;
-    text-transform: uppercase;
-    font-size: .8rem;
-}
-.confirm-header-button:hover{
-    background-color:#285fbe
-    }
+
 .confirm-header span{
-    font-size: .9rem;
-    color: #174fae;
+    font-size: .93rem;
+    color: #109237;
+    font-weight: 600;
+    
 }
 
 .confirm-items {
@@ -1925,6 +1957,15 @@
 .confirm-items li span:last-of-type{
     font-weight: 600;
 }
+.confirm-text{
+    font-size: .9rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+.confirm-text b{
+    text-transform: uppercase;
+    font-size: .75rem;
+}
 
 .confirm-date{
     display: flex;
@@ -1938,12 +1979,13 @@
     border-top: 1px solid #ededed;
     border-bottom: 1px solid #ededed;
     background-color: #fafafa;
+    margin-bottom: 10px;
 }
 .confirm-tips ul{
     margin-top: 10px;
 }
 .confirm-tips ul li{
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
 }
@@ -1968,14 +2010,16 @@
 .confirm-button{
     padding: 14px 20px;
     border-radius: 3px;
-    background-color: #174fae;
+    background-color: #EC7008; 
     color: #fff;
+    font-weight: 600;
     transition: all .3s ease-in-out;
-    margin: 26px 0 5px ;
-    text-transform: uppercase;   
+    margin: 16px 0 5px ;
+    text-transform: uppercase;
+    font-size: .882rem;   
 }
 .confirm-button:hover{
-background-color:#285fbe
+background-color:#b75506
 }
 .doubt-line span{
     display: block;
@@ -2027,7 +2071,7 @@ background-color:#285fbe
 }
 @media(min-width: 900px){
     .filter {
-        padding: 30px 25px;
+        padding:20px;
         flex-wrap: nowrap;
     }
     .filter__inputs {
@@ -2035,8 +2079,8 @@ background-color:#285fbe
         flex-wrap: nowrap;
     }
     .filter__inputs .form_control {
-        width: 48%;
-        margin-right: 2%;
+        width: 49%;
+        margin-right:17px;
     }
     .filter__inputs .form_control:last-of-type {
         margin-right: 1%;
@@ -2045,8 +2089,8 @@ background-color:#285fbe
         margin: 0;
     }
     .filter__button {
-        max-width: 100px;
-        margin-left: 10px;
+        max-width: 110px;
+        margin-left: 5px;
     }
     }
 @media(max-width: 760px) {

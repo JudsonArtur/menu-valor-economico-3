@@ -84,3 +84,6 @@ $('.history-table-row').on('click',function(e){
 $('.re-order, .status-skin.transf').on('click',function(e){  
     e.stopPropagation();
 });
+$('.loading').on('click',function(e){  
+    $(this).addClass('active');
+});
