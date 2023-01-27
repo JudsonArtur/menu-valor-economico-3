@@ -1239,13 +1239,13 @@
     color: #3c3c3c;
 }
 
-.checkbox-item input:checked, .confirm-tips li input {
+.checkbox-item input:checked, .confirm-tips li input{
     background: #02a95c;
     border-color: #02a95c;
     content:  url(../img/checkmark.svg);
  }
 
-.checkbox-item input:hover:not(:disabled), .confirm-tips li input{
+.checkbox-item input:hover:not(:disabled){
     box-shadow: 0 0 0 0.625rem #e6f6ef;
 }
 
@@ -1762,27 +1762,6 @@
     line-height: 0;
 }
 
-.loading{
-  margin: 10px auto 30px;
-  display: inline-flex;
-  padding: 15px 20px;
-  background-color: #fff;
-  border: 1px solid #ececec;
-  border-radius: 3px;
-  color: #1d0e0b;
-  align-items: center;
-  transition:  all .3s ease-in-out;
-  font-size: .9rem;
-  cursor: pointer;
-}
-.loading img{
-    display: none;
-    width: 20px;
-}
-.loading.active img{
-   display: inline-flex;
-   margin-left: 10px;
-}
 
 .pagination{
     justify-content: space-between;
@@ -1995,21 +1974,32 @@
    flex-direction: column;
    align-items: center;
 }
+.confirm-header .confirm-icon{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6f6ef;
+    box-shadow: 0 0 0 0.425rem #e6f6ef;
+    margin-bottom: 10px;
+}
 .confirm-header svg{
-    width: 54px;
+   
     color: #109237;
   }
 
 .confirm-header h2{
-    font-size:1.16rem ;
+    font-size:1.06rem ;
     color: #4a4a4a;
-    margin: 12px 0 2px;
+    margin: 12px 0 5px;
 }
 
 .confirm-header span{
-    font-size: .93rem;
-    color: #109237;
-    font-weight: 600;
+    font-size: .86rem;
+    color: #676767;
+    line-height: 1;
     
 }
 
@@ -2020,31 +2010,25 @@
   margin-bottom: 5px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .confirm-items li span{
- font-size: .9rem;
+ font-size: .86rem;
  padding-right: 10px;
 }
 .confirm-items li span:last-of-type{
     font-weight: 600;
 }
 .confirm-text{
-    font-size: .9rem;
+    font-size: .87rem;
     line-height: 1.5;
-    margin-bottom: 10px;
+    margin-bottom: 18px;
 }
 .confirm-text b{
     text-transform: uppercase;
     font-size: .75rem;
 }
 
-.confirm-date{
-    display: flex;
-    justify-content: flex-end;
-    font-size: .83rem;
-    color: #686868;
-    padding-right: 5px;
-}
 .confirm-tips{
     padding: 20px;
     border-top: 1px solid #ededed;
@@ -2079,16 +2063,18 @@
 }
 
 .confirm-button{
-    padding: 14px 20px;
+    width: 100%;
+    padding: 17px 30px;
     border-radius: 3px;
     background-color: #EC7008; 
     color: #fff;
-    font-weight: 600;
     transition: all .3s ease-in-out;
     margin: 16px 0 5px ;
+    text-align: center;
     text-transform: uppercase;
-    font-size: .882rem;   
+    font-size: .992rem;   
 }
+
 .confirm-button:hover{
 background-color:#b75506
 }
