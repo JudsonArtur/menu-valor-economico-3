@@ -1211,12 +1211,12 @@
     padding: 20px 0;
 }
 
-.checkbox-list li , .confirm-tips li{
+.checkbox-list li , .confirm-tips > ul li{
     margin: 15px 0;
 
 } 
 
-.checkbox-item input, .confirm-tips li input{
+.checkbox-item input, .confirm-tips ul li input{
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -2012,6 +2012,9 @@
   align-items: center;
   justify-content: center;
 }
+.confirm-items.success li{
+    justify-content: flex-start;
+}
 .confirm-items li span{
  font-size: .86rem;
  padding-right: 10px;
@@ -2036,21 +2039,22 @@
     background-color: #fafafa;
     margin-bottom: 10px;
 }
-.confirm-tips ul{
+.confirm-tips > ul{
     margin-top: 10px;
 }
-.confirm-tips ul li{
+.confirm-tips> ul li{
     margin-bottom: 25px;
     display: flex;
     align-items: center;
 }
-.confirm-tips ul li svg{
+
+.confirm-tips > ul li svg{
     width: 18px;
     margin-right: 8px;
     color: #174fae;
 }
 
-.confirm-tips ul li span{
+.confirm-tips  > ul li span{
     width: calc(100% - 24px);
     font-size: .85rem;
     line-height: 1.5;
@@ -2074,6 +2078,46 @@
     text-transform: uppercase;
     font-size: .992rem;   
 }
+
+.success-banks {
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+    padding-left: 30px;
+}
+.success-banks h3{
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+    color: #333;
+    margin: 3px 0;
+ }
+ 
+ .success-banks h3 img{
+     width: 20px;
+     height: 20px;
+     margin-right: 6px;
+     border-radius: 50%;
+ }
+ 
+ .success-banks ul{
+     margin-bottom: 15px;
+     
+ }
+ 
+ .success-banks ul li{
+     padding: 1px;
+ }
+ 
+ .success-banks ul li span{
+     font-size: .8rem;
+     padding-right: 10px;
+ }
+ 
+ .success-banks ul li span:last-of-type{
+     font-weight: 600;
+     color: #5a5a5a;
+ }
+ 
 
 .confirm-button:hover{
 background-color:#b75506
