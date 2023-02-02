@@ -92,21 +92,22 @@ a {
 }
 
 /*DISPLAY FLEX*/
-.ds-flex {
+.flex {
     display: flex;
     flex-wrap: wrap;
 }
-.ds-flex-center {
+.flex-c-hort {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.ds-flex-center--vertical {
+.flex-c-vert {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
-.ds-flex-center--full {
+
+.flex-c-full{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
