@@ -9,7 +9,7 @@ $('body').on('click',function(){
 });
 
 
-$('body').on('click','.newspaper_addon',function(){
+$('body').on('click','.btn-read',function(){
     let documentId = $(this).data('id');
     if(documentId === '' || documentId === undefined || documentId === null){ 
         alert('Sem documento...');
@@ -22,6 +22,30 @@ $('body').on('click','.newspaper_addon',function(){
 $('body').on('click','.close-bar',function(){
     $('.modal-test').css('display','none')
 })
+
+$('body').on('click','.newspaper_addon',function(){
+    $('.press-cart').find('.press-content').addClass('open');
+      $('.press-cart').animate({
+        width: '60%',
+        paddingLeft: '20px',
+        paddingBottom: '20px'
+      },function(){
+        $('.item').removeClass('box4').addClass('box2');
+      });
+});
+
+$('body').on('click','.close_buy_now, .press-cancel',function(){
+    $('.press-cart').find('.press-content').removeClass('open');
+      $('.press-cart').animate({
+        width: '0%',
+        paddingLeft: '0px',
+        paddingBottom: '0px'
+      },function(){
+        $('.item').removeClass('box2').addClass('box4');
+      });
+})
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
    const imageObserver = new IntersectionObserver((entries, imgObserver) => {

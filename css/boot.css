@@ -96,17 +96,21 @@ a {
     display: flex;
     flex-wrap: wrap;
 }
+
+/* flex-center-horixontal */
 .flex-c-hort {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+/* flex-center-vertical */
 .flex-c-vert {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
+/* flex-center-full */
 .flex-c-full{
     display: flex;
     flex-wrap: wrap;
@@ -159,6 +163,8 @@ a {
     }
     .box2 {
         width: 50%;
+        padding:10px;
+        
     }
     .box5{
         width: 25%;
@@ -411,11 +417,17 @@ a {
     font-size: .98rem;
     color: #000;
 }
+
+.w_100{
+    width: calc(100% + 20px);   
+}
+
 .w_900 {
     width: 100%;
     flex-basis: 100%;
     max-width: 950px;
 }
+
 .filter_input_full {
     flex-basis: 50%;
     border-radius: 3px;
