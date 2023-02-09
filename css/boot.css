@@ -117,7 +117,10 @@ a {
     justify-content: center;
     align-items: center;
 }
-
+.box0{
+    width: 0;
+    display: none;
+}
 .box1,
 .box2,
 .box3,
@@ -305,11 +308,13 @@ a {
     width: 40%;
     position: relative;
     margin: 30px auto;   
+    border-radius: 2px;
     background: #fff;    
 }
 .modal-body{
     padding: 35px;
     display: flex;
+    border-radius: 2px;
     flex-wrap: wrap;
 }
 .modal-lg{
@@ -345,8 +350,8 @@ a {
 .modal-close, .modal-close-all {
     font-size: 2rem;
     position: absolute;
-    right: 30px;
-    top: 15px;
+    right: 20px;
+    top: 10px;
     opacity: .5;
     transition: all .2s ease-in-out;
     cursor: pointer;
@@ -355,6 +360,52 @@ a {
     opacity: 1;
 }
 
+
+.modal-close svg{
+    width: 28px;
+    color: #d40b0b;
+}
+.modal .modal-icon{
+    margin: 0px auto 20px !important;
+    background-color: #ffde96;
+    box-shadow: 0 0 0 0.425rem #ffde96;
+}
+
+.modal-icon svg{
+    color: #e4a008;
+    fill: #e4a008;
+}
+
+.modal-warning-text{
+    font-size: .86rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.modal-warning-button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.modal-warning-button a{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: .85rem;
+    background: #2c65c7;
+    color: white;
+    border-radius: 3px;
+
+}
+.modal-warning-button a svg{
+     width: 16px;
+     margin-left: 5px;
+     position: relative;
+     top: 2px;
+    
+}
 /*APP MODAL CONFIRM*/
 .modal-confirm {
     padding: 10px 20px;
@@ -420,6 +471,12 @@ a {
 
 .w_100{
     width: calc(100% + 20px);   
+}
+
+.w_100.open{
+    width: 0;
+    margin-left: 0px; 
+     margin-right:0px;
 }
 
 .w_900 {

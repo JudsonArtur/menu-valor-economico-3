@@ -8,6 +8,13 @@ $('body').on('click',function(){
    $('.dropdown-menu').removeClass('open');
 });
 
+$('.modal-open').on('click', function() {
+  $($(this).data('target')).addClass('active');
+});
+
+$('.modal-close').on('click', function() {
+  $('.modal').removeClass('active');
+});
 
 $('body').on('click','.btn-read',function(){
     let documentId = $(this).data('id');
@@ -17,35 +24,50 @@ $('body').on('click','.btn-read',function(){
     }
     let config = { documentId: documentId, darkMode: true };
     CloudPDF(config, document.getElementById('viewer')).then((instance) => {});
-    $('.modal-test').css('display','block')
+    $('.modal-pdf').css('display','block')
 })
 $('body').on('click','.close-bar',function(){
-    $('.modal-test').css('display','none')
+    $('.modal-pdf').css('display','none')
 })
 
 $('body').on('click','.newspaper_addon',function(){
+    if (window.matchMedia('(max-width: 888px)').matches){
+          $('.press-cart').find('.press-content').addClass('open');
+          $('.press-cart').animate({
+            width: '100%',
+            paddingLeft: '0px',
+            paddingBottom: '20px'
+          },function(){
+            $('.item').removeClass('box4').addClass('box0');
+            $('.w_100').addClass('open');
+          });
+        return;
+    }
     $('.press-cart').find('.press-content').addClass('open');
-      $('.press-cart').animate({
-        width: '60%',
-        paddingLeft: '20px',
-        paddingBottom: '20px'
-      },function(){
+    $('.press-cart').animate({
+      width: '60%',
+      paddingLeft: '20px',
+      paddingBottom: '20px'
+    },function(){
         $('.item').removeClass('box4').addClass('box2');
-      });
+    });
 });
 
 $('body').on('click','.close_buy_now, .press-cancel',function(){
-    $('.press-cart').find('.press-content').removeClass('open');
+      $('.press-cart').find('.press-content').removeClass('open');
       $('.press-cart').animate({
         width: '0%',
         paddingLeft: '0px',
         paddingBottom: '0px'
       },function(){
+        if (window.matchMedia('(max-width: 888px)').matches){
+          $('.item').removeClass('box0').addClass('box4');
+          $('.w_100').removeClass('open');
+          return;
+        }
         $('.item').removeClass('box2').addClass('box4');
       });
 })
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
    const imageObserver = new IntersectionObserver((entries, imgObserver) => {
