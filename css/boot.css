@@ -348,22 +348,26 @@ a {
     max-width: 420px;
 }
 .modal-close, .modal-close-all {
-    font-size: 2rem;
     position: absolute;
     right: 20px;
-    top: 10px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    top: 14px;
     opacity: .5;
+    background-color: transparent;
     transition: all .2s ease-in-out;
     cursor: pointer;
 }
 .modal-close:hover, .modal-close-all:hover {
     opacity: 1;
+    background-color: #f3f3f3;
 }
 
 
 .modal-close svg{
     width: 28px;
-    color: #d40b0b;
+    color: #111;
 }
 .modal .modal-icon{
     margin: 0px auto 20px !important;

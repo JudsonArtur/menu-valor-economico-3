@@ -606,14 +606,12 @@
 .press-cart{
     padding: 0px;
     width: 0%;
-    display: flex;
 }
 .press-content{
     margin-top: 10px;
     display: none;
     width: 100%;
-    padding: 20px;
-    min-height: calc( 100vh - 20px);
+    padding: 20px 20px 30px;
     border-left: 1px solid #f0f0f0;
     background-color: #fff;
     border-radius: 5px;
@@ -627,11 +625,23 @@
 }
 .close_buy_now svg, .remove svg {
     color: #c63016;
-    width: 30px;
+    width: 28px;
     line-height: 0;
     position: relative;
-     top:3px
 }
+.close_buy_now {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: relative;
+    left: -5px;
+}
+
+.close_buy_now:hover{
+    background-color: #f3f3f3;
+}
+
 .press-content .remove svg{
   width: 25px;
   top: 0;
@@ -646,21 +656,11 @@
     font-size: 1.06rem;
 }
 
-.press-content header a{
-    padding:7px 8px;
-    background-color: #d73b3b;
-    border-radius: 3px;
-    position: relative;
-    top: -1px;
-font-size: .8rem;
-    color: #fff;
-}
-
-.press-content ul li:last-of-type {
+.press-content > ul li:last-of-type {
     border: none;
 }
 
-.press-content ul li {
+.press-content > ul li {
     justify-content: space-between;
     margin-top: 15px;
     border-bottom: 1px solid #ddd;
@@ -758,26 +758,16 @@ width: 100%;
     font-size: .8rem;
 }
 
-.press-content label {
-    padding: 5px 0px;
-    cursor: pointer;
-}
-.press-content label:first-of-type  img{
-    width: 28px;
-}
-.press-content label:last-of-type  img{
-    width: 22px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
 .payment_type_title {
     padding-top: 1px;
     font-size: .86rem;
     padding: 0 10px;
 }
 
-
+.press-content .checkbox-list li label{
+ font-weight: 300;
+ font-size: .85rem;
+}
 .complete_payment span {
     padding: 15px 10px;
     background-color: #02a95c;
@@ -2246,7 +2236,7 @@ width: 100%;
     margin: 10px 0 20px 0;
     padding: 20px;
     font-size: .93rem;
-    background-color: #fbd8d8;
+    background-color: #fff1f1;
     color: #212020;
     border-radius: 3px;
 }
@@ -2900,6 +2890,7 @@ form {
     .container-header{
         padding: 10px;
     }
+
     .press-content label:last-of-type img{
         display: none;
     }
@@ -2982,16 +2973,3 @@ form {
         font-size: .719rem;
     }
 }
-
-    @media(max-width:344px){
-        .press-content header a {
-            padding: 5px 6px;
-            background-color: #d73b3b;
-            border-radius: 2px;
-            position: relative;
-            top: -31px;
-            font-size: .74rem;
-            color: #fff;
-            margin-left: 175px;
-        }
-    }

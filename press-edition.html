@@ -627,13 +627,13 @@
                     <div class="press-cart">
                         <div class="press-content">
                             <header class="flex-c-vert">
-                                <div class="flex-c-vert"><span class="close_buy_now">
+                                <div class="flex-c-vert">
+                                    <span class="close_buy_now flex-c-full">
                                     <svg viewBox="0 0 512 512">
                                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"></path></svg>
-                                </span>
+                                    </span>
                                 <h2>Lista de Pedido</h2></div>
                                 
-                                <a href="https://dev.valoreconomico.co.ao/area/edicao-impressa&amp;reset=true" class="ds-flex-center--vertical press-cancel">Cancelar</a>
                             </header>
                             <ul>
                                 <li class="flex-c-vert item_127">                        
@@ -665,24 +665,60 @@
                                     <strong>Forma de Pagamento</strong>
                                     <p>Escolha como você quer pagar</p>
                                 </div>
-                                <div>
-                                    <label for="payment_type" class="flex-c-vert">
-                                        <input type="checkbox" name="trx" id="payment_type" class="transaction" value="mcexpress" checked="checked">
-                                        <span class="payment_type_title">Multicaixa Express</span>
-                                        <img src="img/mx-express.png" alt="">
-                                    </label>            
-                                    <label for="payment_type-2"  class="flex-c-vert">
-                                        <input type="checkbox"  id="payment_type-2"  name="trx" class="transaction" value="bankwire">
-                                        <span class="payment_type_title">Transferência Bancária</span>
-                                        <img src="img/bic-logo.png" alt="" style="height: 22px;">
-                                        <img src="img/bpc-logo.png" alt="">
-                                        <img src="img/econo-logo.png" alt="">
+                                <div class="payment-block-list">
+                                    <div class="payment-ways payment-gateway">
+                                        <div class="flex-c-vert payment-ways--header">
+                                            <input type="radio" class="payment-ways--radio"  id="gateway" checked="checked" >
+                                            <label for="gateway" data-id="gateway">
+                                                <div class="flex-c-vert">
+                                                      <img src="img/mx-express.png" alt="" >
+                                                    <span>Multicaixa Express</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="payment-ways payment-transfer">
+                                        <div class="flex-c-vert payment-ways--header">
+                                            <input type="radio" class="payment-ways--radio" id="transfer" >
+                                            <label for="transfer" data-id="transfer">
+                                                <div class="flex-c-vert" style="justify-content: space-between;">
+                                                    <div class="flex-c-vert">
+                                                        <span style="margin-left: 10px;">Transferência Bancaria</span>
+                                                    </div>
+                                                    <ul class="flex-c-vert banks-imgs">
+                                                       <li><span><img src="img/bic-logo.png" alt=""  title="Banco BIC"></span></li>
+                                                       <li><span><img src="img/econo-logo.png" alt=""  title="Banco Económico"></span></li>
+                                                       <li><span><img src="img/bpc-logo.png" alt="" title="Banco BPC"></span></li>
+                                                    </ul>
+                                                </div>
+                                            </label>
+                                        </div>                                        
+                                    </div>
+                                </div>                          
+                            </div>
+                            <div>
+                            <ul class="checkbox-list">
+                                <li class="flex checkbox-item">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur iure assumenda, culpa asperiores e quo obcaecati? Nihil, earum.
                                     </label>
-                                </div>                                
-                            </div>
-                            <div class="complete_payment flex">
-                                <span class="_pos_finish">Completar Pedido</span>
-                            </div>
+                                </li>
+                                <li class="flex checkbox-item">
+                                    <input type="checkbox" name="" id="">
+                                    <label for="">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil consequuntur iure assumenda, culpa asperiores e quo obcaecati? Nihil, earum.
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                            <button class="payment-button pay-gateway open">
+                                <img src="img/mx-express.png" alt="">
+                                 Multicaixa Express
+                            </button>
+                            <button class="payment-button pay-transfer">
+                                Transferência Bancaria
+                             </button>
                         </div>
                     </div>
                 </div>

@@ -31,6 +31,11 @@ $('body').on('click','.close-bar',function(){
 })
 
 $('body').on('click','.newspaper_addon',function(){
+      
+     if( $(this).parents('.item').hasClass('opened')){
+        return ;
+     }
+
     if (window.matchMedia('(max-width: 888px)').matches){
           $('.press-cart').find('.press-content').addClass('open');
           $('.press-cart').animate({
@@ -49,7 +54,7 @@ $('body').on('click','.newspaper_addon',function(){
       paddingLeft: '20px',
       paddingBottom: '20px'
     },function(){
-        $('.item').removeClass('box4').addClass('box2');
+        $('.item').removeClass('box4').addClass('box2').addClass('opened');
     });
 });
 
@@ -65,7 +70,7 @@ $('body').on('click','.close_buy_now, .press-cancel',function(){
           $('.w_100').removeClass('open');
           return;
         }
-        $('.item').removeClass('box2').addClass('box4');
+        $('.item').removeClass('box2').removeClass('opened').addClass('box4');
       });
 })
 
