@@ -63,7 +63,7 @@
     -webkit-box-align: center;
     align-items: center;
     width: 40px;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .menu-item {
@@ -78,7 +78,7 @@
     margin-bottom: 5px;
 }
 
-.menu-item:hover {
+.menu-item:hover, .menu-item.active {
     background: rgb(34, 34, 34);
     border-radius: 50%;
     cursor: pointer;
@@ -91,6 +91,12 @@
     color: rgba(255, 255, 255, 0.4);
     transition: fill 0.4s ease-in-out 0s;
 }
+
+.menu-item:hover svg , .menu-item.active svg {
+    fill: rgb(255, 255, 255);
+    transition: fill 0.4s ease-in-out 0s;
+}
+
 
 .svg-icon-outline-i,
 .svg-icon-outline-l,
@@ -107,6 +113,7 @@
 }
 
 .menu-item:hover svg .svg-icon-outline-s,
+.menu-item.active svg .svg-icon-outline-s,
 .subscribe-button--icon svg .svg-icon-outline-s {
     stroke: rgba(255, 255, 255, 1);
 }
@@ -120,26 +127,24 @@
 }
 
 .menu-item:hover svg .svg-icon-prime-l ,
+.menu-item.active svg .svg-icon-prime-l ,
 .subscribe-button--icon svg  .svg-icon-prime-l {
     fill: rgba(255, 255, 255, 1);
 }
+
 
 .svg-icon-prime {
     fill: rgba(255, 255, 255, 0.4);
 }
 
-.menu-item:hover svg .svg-icon-prime , 
+.menu-item:hover svg .svg-icon-prime ,
+.menu-item:hover svg .svg-icon-prime, 
 .subscribe-button--icon svg .svg-icon-prime {
     fill: rgba(255, 255, 255, 1);
 }
 
 .svg-icon-i, .subscribe-button--icon svg .svg-icon-i{
     stroke: #222
-}
-
-.menu-item:hover svg {
-    fill: rgb(255, 255, 255);
-    transition: fill 0.4s ease-in-out 0s;
 }
 
 .menu-tooltip, .re-order i{
